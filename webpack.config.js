@@ -4,7 +4,7 @@ module.exports = {
     entry: path.join(__dirname, 'public', 'src','index.js'),
     output: {
         path: path.join(__dirname, 'public', 'dist'),
-        filename: 'vendor.js'
+        filename: 'app.bundle.js'
     },
     devtool: 'source-map',
     module: {

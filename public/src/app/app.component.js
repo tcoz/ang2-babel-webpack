@@ -5,9 +5,11 @@ class AppComponent {
 }
 
 AppComponent.annotations = [
+
     new Component({
         selector: "my-app",
-        template: '<h1>My First Angular 2 A DUH</h1>'
+        templateUrl: './app.component.html',
+        styleUrls: [ './app-style.css' ]
     })
 ];
 
