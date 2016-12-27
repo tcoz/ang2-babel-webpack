@@ -8,8 +8,8 @@ AppComponent.annotations = [
 
     new Component({
         selector: "app-tcoz",
-        templateUrl: './app.component.html',
-        styleUrls: [ './app-style.css' ]
+        templateUrl: './app/app.component.html',
+        styleUrls: [ './app/app-style.css' ]
     })
 ];
 
