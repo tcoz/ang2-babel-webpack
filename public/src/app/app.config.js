@@ -1,6 +1,8 @@
-class AppConfig {}
+class AppConfig {
+    constructor ( ) {}
+}
 
-AppConfig.Globals =  {
+AppConfig.Globals = {
     TEST_VAL: 'hey now here is the value'
 };
 export { AppConfig }
