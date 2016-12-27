@@ -7,7 +7,7 @@ class AppComponent {
 AppComponent.annotations = [
 
     new Component({
-        selector: "my-app",
+        selector: "app-tcoz",
         templateUrl: './app.component.html',
         styleUrls: [ './app-style.css' ]
     })
