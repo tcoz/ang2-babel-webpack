@@ -1,2 +1,2 @@
 <div>{{ test_val }}</div>
-<tcoz-testcomp [receivedChildVal]="pass_to_child_val">{{ sample_val }}</tcoz-testcomp>
+<tcoz-testcomp [receivedChildVal]="pass_to_child_val" (valueChange)="onTestCompEvent($event)">{{ sample_val }}</tcoz-testcomp>
