@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
 class UtilsModule {
-    constructor () {};
+    constructor () {}
 }
 
 UtilsModule.annotations = [
