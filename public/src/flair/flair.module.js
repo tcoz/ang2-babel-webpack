@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { InputComponent } from './samplecomponent/sample.component';
+import { SampleComponent } from './samplecomponent/sample.component';
 
 class FlairModule {
     constructor ( ) {}
@@ -7,9 +7,8 @@ class FlairModule {
 
 FlairModule.annotations = [
     new NgModule ( {
-        declarations: [ InputComponent ],
-        imports: [],
-        exports: [ InputComponent ]
+        declarations: [ SampleComponent ],
+        exports: [ SampleComponent ]
     } )
 ];
 export { FlairModule }

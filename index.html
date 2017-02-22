@@ -1,11 +1,19 @@
 <html>
 <head>
-    <base href="/public/src/">
-    <title>Angular 2 ES6 no TypeScript!</title>
+    <base href='/' />
+
+    <title>Angular2 Babel Webpack2 ES6 No TypeScript</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="/public/dist/app.bundle.js"></script>
+    <script src="vendor.bundle.js"></script>
+    <script src="angular.bundle.js"></script>
+    <script src="app.bundle.js"></script>
+    <script src="css.bundle.js"></script>
 </head>
-<body>
-<app-tcoz>Loading...</app-tcoz>
+<body style="background-color: #e6e6e6">
+<sample-app style="width: 100%">
+    <div class="app-loader animated bounceIn">
+        <b>Loading it up...</b>
+    </div>
+</sample-app>
 </body>
 </html>
