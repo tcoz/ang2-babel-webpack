@@ -7,10 +7,9 @@ class AppComponent {
 AppComponent.annotations = [
 
     new Component({
-        selector: "app-tcoz",
-        templateUrl: './app/app.component.html',
-        styleUrls: [ './app/app-style.css' ]
+        selector: "sample-app",
+        templateUrl: require ( './app.component.html' )
     })
 ];
 
-export {AppComponent};
+export { AppComponent };
