@@ -1,10 +1,13 @@
 var path = require('path');
 
 module.exports = {
+    devtool: 'source-map',
     entry: path.join(__dirname, 'public', 'src','index.js'),
     output: {
         path: path.join(__dirname, 'public', 'dist'),
-        filename: 'app.bundle.js'
+        filename: '[name].bundle.js',
+        devtoolLineToLine: true,
+        sourceMapFilename: '[name].bundle.map'
     },
     devtool: 'source-map',
     module: {
