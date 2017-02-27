@@ -1,29 +1,24 @@
-import { Component, EventEmitter } from '@angular/core';
-import { AppConfig } from '../../app/app.config';
+import { Component } from '@angular/core';
+import { SampleService } from '../../services/sample.service';
 
-class InputComponent {
-    constructor () {
+class SampleComponent {
+    static get parameters ( ) {
+        return [ SampleService ];
     }
 
-    onBtnClick () {
-        this.valueChange = new EventEmitter ( ).emit ( {
-            note: AppConfig.Notifications.TEST_NOTE,
-            data: 'Here is the emitted data'
-        });
+    constructor ( sampleService ) {
+        this.sampleSvc = sampleService;
+    }
+
+    get sampleValue ( ) {
+        return this.sampleSvc.sampleValue;
     }
 }
 
-InputComponent.annotations = [
+SampleComponent.annotations = [
     new Component ( {
-        selector: 'tcoz-testcomp',
-        templateUrl: './flair/samplecomponent/sample.component.html',
-        styleUrls: [ './flair/samplecomponent/sample.component.css' ],
-        inputs: [
-            'receivedChildVal'
-        ],
-        outputs: [
-            'valueChange'
-        ],
+        selector: 'sample-component',
+        templateUrl: require ( './sample.component.html' )
     } )
 ];
-export { InputComponent }
+export { SampleComponent }

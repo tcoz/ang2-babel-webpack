@@ -10,8 +10,7 @@ ViewsModule.annotations = [
     new NgModule ( {
         declarations: [ HomeComponent ],
         imports: [ FlairModule ],
-        exports: [ FlairModule ],
-        services: [ ]
+        exports: [ FlairModule ]
     })
 ];
 

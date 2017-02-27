@@ -1,34 +1,50 @@
-var path = require('path');
+const path = require ( 'path' );
+const webpack = require ( 'webpack' );
 
-module.exports = {
-    devtool: 'source-map',
-    entry: path.join(__dirname, 'public', 'src','index.js'),
-    output: {
-        path: path.join(__dirname, 'public', 'dist'),
-        filename: '[name].bundle.js',
-        devtoolLineToLine: true,
-        sourceMapFilename: '[name].bundle.map'
-    },
-    devtool: 'source-map',
-    module: {
-        loaders: [
-            {
-                test: /\.js$/,
-                loader: "babel-loader",
-                exclude: /node_modules/,
-                query: {
-                    presets: ['es2015']
+module.exports = function() {
+    return {
+    	devtool: 'source-map',
+        entry: {
+            'app': './public/src/app-chunk.js',
+            'vendor' : './public/src/vendor-chunk.js',
+            'css' : './public/src/css-chunk.js',
+            'angular' : './public/src/angular-chunk.js'
+        },
+        output: {
+            path: path.join(__dirname, '/dist'),
+            filename: '[name].bundle.js',
+            publicPath: '',
+            devtoolLineToLine: true,
+            sourceMapFilename: '[name].bundle.map'
+        },
+        resolve: {
+            extensions: ['.js', '.json'],
+            modules: [path.join(__dirname, 'src'), 'node_modules']
+        },
+        module: {
+            loaders: [
+                {
+                    test: /\.js$/,
+                    loader: "babel-loader",
+                    exclude: /node_modules/,
+                    query: {
+                        presets: ['es2015']
+                    }
+                },
+                {
+                    test: /\.css$/,
+                    loaders: ['css-loader']
+                },
+                {
+                    test: /\.(css|html|jpg|png|gif)$/,
+                    loader: 'file-loader'
+                },
+                {
+                    test: /\.(woff|woff2|eot|ttf|svg)$/,
+                    loader: 'url-loader?limit=100000'
                 }
-            },
-            {
-                test: /\.css$/,
-                exclude: /\.useable\.css$/,
-                loader: "style!css"
-            },
-            {
-                test: /\.useable\.css$/,
-                loader: "style/useable!css"
-            }
-        ]
-    }
+            ],
+        },
+        plugins: [],
+    };
 }
