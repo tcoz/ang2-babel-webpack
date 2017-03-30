@@ -2,6 +2,8 @@
 Seed for ang2-babel-webpack2 using ES6 project
 Includes simple examples of webpack 2 chunking, etc.
 
+** Note that there is a branch for Angular 4. Same exact project, just updated the Angular packages and had to do a couple of small tweaks. **
+
 You do this, it just works:
 
 - download/clone repo.
