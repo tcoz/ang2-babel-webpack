@@ -13,7 +13,6 @@ require('!!script-loader!babel-polyfill/dist/polyfill.js');
  */
 require('!!script-loader!zone.js/dist/zone.js');
 
-require('!!script-loader!reflect-metadata/test/Reflect.js');
 require('!!script-loader!rxjs/bundles/Rx.js');
 
 
